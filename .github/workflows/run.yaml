@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  build:
+  run:
     runs-on: ubuntu-latest
 
     steps:
@@ -25,7 +25,7 @@ jobs:
         run: poetry install
 
       - name: Inject Google token
-        run: echo "${{ secrets.GOOGLE_TOKEN_PICKLE }}" > .secrets/token.pickle
+        run: echo "${{ secrets.GOOGLE_TOKEN_PICKLE }}" | base64 -d > .secrets/token.pickle
 
       - name: Analyze photos
         run: poetry run python google_photos.py
