@@ -12,8 +12,11 @@ Just some pet project to track my calories based on pictures from my Google Phot
 * Go to [OAuth consent screen](https://console.cloud.google.com/apis/credentials/consent) and add your email as a test user.
 * Run `poetry run python google_photos_init.py` and allow the app to access your Google Photos. If successful, you should see the following message in your Browser: "The authentication flow has completed. You may close this window."
 * Now, there's a `token.pickle` file in the `.secrets` folder. This file is used to authenticate the app in the future.
+* Create a new API Key for the [OpenAI Platform](https://platform.openai.com/) and store it (or pass it) via the `OPENAI_API_KEY` environment variable.
 
 ## Usage
+
+To analyze all your food photos from yesterday, run:
 
 ```bash
 poetry run python main.py
