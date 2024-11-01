@@ -7,6 +7,10 @@ on:
   schedule:
     - cron: '0 2 * * *'
   workflow_dispatch:
+    google_photos_date:
+      description: 'Date to filter Google Photos (yyyy-mm-dd). If unset, yesterday will be used.'
+      required: false
+      default: ''
 
 jobs:
   run:
@@ -32,3 +36,5 @@ jobs:
 
       - name: Analyze photos
         run: poetry run python main.py
+        env:
+          GOOGLE_PHOTOS_DATE: ${{ github.event.inputs.google_photos_date }}
