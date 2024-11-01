@@ -20,7 +20,6 @@ AUTH_PORT = int(os.getenv("GOOGLE_AUTH_PORT", "8080"))
 TOKEN_PICKLE_FILE = os.getenv("GOOGLE_TOKEN_PICKLE_FILE", ".secrets/token.pickle")
 DATE_STRING = os.getenv("GOOGLE_PHOTOS_DATE")  # yyyy-mm-dd
 SEARCH_TERM = os.getenv("GOOGLE_PHOTOS_SEARCH_TERM", "food")
-OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 
 
 def parse_date_string(date_string):
@@ -97,7 +96,7 @@ class FoodAnalysisResponse(BaseModel):
 
 
 def analyze_images(images):
-    client = OpenAI(api_key=OPENAI_API_KEY)
+    client = OpenAI()
 
     image_messages = []
     for image in images:
