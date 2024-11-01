@@ -56,7 +56,7 @@ def search_photos(service, search_term=None, start_date=None, end_date=None):
         print('No media items found.')
     else:
         for item in items:
-            print(f"Filename: {item['filename']}, URL: {item['baseUrl']}")
+            print(f"Filename: {item['filename']}")
 
 def main():
     creds = authenticate()
