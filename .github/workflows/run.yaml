@@ -1,0 +1,31 @@
+name: Run
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Install Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install Poetry
+        run: pip install poetry
+
+      - name: Install dependencies
+        run: poetry install
+
+      - name: Inject Google token
+        run: echo "${{ secrets.GOOGLE_TOKEN_PICKLE }}" > .secrets/token.pickle
+
+      - name: Analyze photos
+        run: poetry run python google_photos.py
