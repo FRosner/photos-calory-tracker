@@ -1,9 +1,12 @@
 name: Run
 
 on:
-  push:
-    branches:
-      - main
+#  push:
+#    branches:
+#      - main
+  schedule:
+    - cron: '0 2 * * *'
+  workflow_dispatch:
 
 jobs:
   run:
@@ -28,4 +31,4 @@ jobs:
         run: echo "${{ secrets.GOOGLE_TOKEN_PICKLE }}" | base64 -d > .secrets/token.pickle
 
       - name: Analyze photos
-        run: poetry run python google_photos.py
+        run: poetry run python main.py

@@ -16,5 +16,5 @@ Just some pet project to track my calories based on pictures from my Google Phot
 ## Usage
 
 ```bash
-poetry run python google_photos.py
+poetry run python main.py
 ```
