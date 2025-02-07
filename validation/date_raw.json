@@ -1,0 +1,18 @@
+{
+  "foods": [
+    {
+      "readable_name": "Date",
+      "protein_g": 2,
+      "fat_g": 0.5,
+      "fibre_g": 8.7,
+      "carbohydrate_g": 65,
+      "total_mass_g": 100,
+      "total_kcal": 297,
+      "total_health_score": 8,
+      "processing_degree": "low",
+      "components": [
+        "Date"
+      ]
+    }
+  ]
+}

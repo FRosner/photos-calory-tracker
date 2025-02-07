@@ -84,6 +84,7 @@ class FoodAnalysis(BaseModel):
     protein_g: int
     fat_g: int
     carbohydrate_g: int
+    fibre_g: int
     total_mass_g: int
     total_kcal: int
     total_health_score: int

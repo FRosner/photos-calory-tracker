@@ -1,0 +1,18 @@
+{
+  "foods": [
+    {
+      "readable_name": "Cottage Cheese",
+      "protein_g": 19.5,
+      "fat_g": 6,
+      "fibre_g": 0,
+      "carbohydrate_g": 1.5,
+      "total_mass_g": 150,
+      "total_kcal": 138,
+      "total_health_score": 8,
+      "processing_degree": "low",
+      "components": [
+        "cottage cheese"
+      ]
+    }
+  ]
+}
