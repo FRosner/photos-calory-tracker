@@ -120,7 +120,7 @@ def analyze_images(images):
                 {
                     "role": "system",
                     "content": "You are a nutrition and health expert. You are helping a user understand the nutritional value of their food to help them eat healthier. "
-                               "For each image, estimate the protein, fat, and carbohydrate content in grams, the total mass in grams, the total calories, "
+                               "For each image, estimate the protein, fat, fibre, and carbohydrate content in grams, the total mass in grams, the total calories, "
                                "the total health score (1-10, 10 being super healthy, 1 being heart-attack-unhealthy), the processing degree ('low', 'medium', 'high'), "
                                "and the components that are in the dish. If you are unsure, please provide an estimate. Only refuse the query if the image does not contain any food."
                                "Please also provide a readable name of the dish. If this looks like a well-known dish, you can use that name. Otherwise,"
