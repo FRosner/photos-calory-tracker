@@ -28,7 +28,7 @@ def compare_analysis(actual: FoodAnalysisResponse, expected: Dict[str, Any]) -> 
     expected_food = expected["foods"][0]
     
     fields_to_compare = [
-        "protein_g", "fat_g", "carbohydrate_g", "total_mass_g", 
+        "protein_g", "fat_g", "carbohydrate_g", "total_mass_g", "fibre_g",
         "total_kcal", "total_health_score"
     ]
     

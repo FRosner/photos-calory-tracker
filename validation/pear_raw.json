@@ -1,0 +1,18 @@
+{
+  "foods": [
+    {
+      "readable_name": "Pear",
+      "protein_g": 0,
+      "fat_g": 0,
+      "fibre_g": 6,
+      "carbohydrate_g": 28,
+      "total_mass_g": 192,
+      "total_kcal": 109,
+      "total_health_score": 10,
+      "processing_degree": "low",
+      "components": [
+        "Pear"
+      ]
+    }
+  ]
+}

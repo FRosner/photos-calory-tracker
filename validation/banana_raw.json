@@ -1,0 +1,18 @@
+{
+  "foods": [
+    {
+      "readable_name": "Banana",
+      "protein_g": 1,
+      "fat_g": 0,
+      "fibre_g": 2,
+      "carbohydrate_g": 19,
+      "total_mass_g": 71,
+      "total_kcal": 72,
+      "total_health_score": 8,
+      "processing_degree": "low",
+      "components": [
+        "Banana"
+      ]
+    }
+  ]
+}

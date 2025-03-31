@@ -21,3 +21,11 @@ To analyze all your food photos from yesterday, run:
 ```bash
 poetry run python main.py
 ```
+
+## Validation
+
+To run validation against the validation dataset, run:
+
+```bash
+poetry run python validate.py
+```
