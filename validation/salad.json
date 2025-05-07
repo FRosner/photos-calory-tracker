@@ -1,0 +1,18 @@
+{
+  "foods": [
+    {
+      "readable_name": "salad",
+      "protein_g": 14,
+      "fat_g": 17,
+      "fibre_g": 4,
+      "carbohydrate_g": 6,
+      "total_mass_g": 300,
+      "total_kcal": 232,
+      "total_health_score": 10,
+      "processing_degree": "low",
+      "components": [
+        "tomatoes", "lettuce", "mozarella cheese"
+      ]
+    }
+  ]
+}

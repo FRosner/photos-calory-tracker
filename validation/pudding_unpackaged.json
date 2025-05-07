@@ -1,0 +1,18 @@
+{
+  "foods": [
+    {
+      "readable_name": "chocolate pudding",
+      "protein_g": 4,
+      "fat_g": 5,
+      "fibre_g": 1,
+      "carbohydrate_g": 25,
+      "total_mass_g": 150,
+      "total_kcal": 165,
+      "total_health_score": 3,
+      "processing_degree": "high",
+      "components": [
+        "milk", "sugar", "cocoa powder", "thickening agents", "salt", "tapioca"
+      ]
+    }
+  ]
+}

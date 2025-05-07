@@ -23,7 +23,7 @@ def compare_analysis(actual: FoodAnalysisResponse, expected: Dict[str, Any]) -> 
     if not actual or not actual.foods:
         return {"error": "No analysis produced"}
     
-    differences = {}
+    result = {}
     actual_food = actual.foods[0]  # Assuming single food item per image for simplicity
     expected_food = expected["foods"][0]
     
@@ -35,35 +35,37 @@ def compare_analysis(actual: FoodAnalysisResponse, expected: Dict[str, Any]) -> 
     for field in fields_to_compare:
         actual_value = getattr(actual_food, field)
         expected_value = expected_food[field]
-        if actual_value != expected_value:
-            differences[field] = {
-                "actual": actual_value,
-                "expected": expected_value,
-                "difference": actual_value - expected_value
-            }
+        absolute_diff = actual_value - expected_value
+        percentage_diff = (absolute_diff / expected_value * 100) if expected_value != 0 else float('inf')
+        result[field] = {
+            "actual": actual_value,
+            "expected": expected_value,
+            "difference": absolute_diff,
+            "percentage_diff": round(percentage_diff, 2)
+        }
     
     # Compare string fields
     for field in ["readable_name", "processing_degree"]:
         actual_value = getattr(actual_food, field)
         expected_value = expected_food[field]
-        if actual_value != expected_value:
-            differences[field] = {
-                "actual": actual_value,
-                "expected": expected_value
-            }
+        result[field] = {
+            "actual": actual_value,
+            "expected": expected_value,
+            "is_different": actual_value != expected_value
+        }
     
     # Compare components list
     actual_components = set(actual_food.components)
     expected_components = set(expected_food["components"])
-    if actual_components != expected_components:
-        differences["components"] = {
-            "actual": list(actual_components),
-            "expected": list(expected_components),
-            "missing": list(expected_components - actual_components),
-            "unexpected": list(actual_components - expected_components)
-        }
+    result["components"] = {
+        "actual": list(actual_components),
+        "expected": list(expected_components),
+        "missing": list(expected_components - actual_components),
+        "unexpected": list(actual_components - expected_components),
+        "is_different": actual_components != expected_components
+    }
     
-    return differences
+    return result
 
 
 def main():

@@ -1,7 +1,7 @@
 {
   "foods": [
     {
-      "readable_name": "Date",
+      "readable_name": "date",
       "protein_g": 2,
       "fat_g": 0.5,
       "fibre_g": 8.7,

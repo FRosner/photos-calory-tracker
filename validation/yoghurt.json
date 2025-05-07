@@ -1,0 +1,18 @@
+{
+  "foods": [
+    {
+      "readable_name": "yoghurt",
+      "protein_g": 7,
+      "fat_g": 6,
+      "fibre_g": 0,
+      "carbohydrate_g": 5,
+      "total_mass_g": 152,
+      "total_kcal": 106,
+      "total_health_score": 8,
+      "processing_degree": "low",
+      "components": [
+        "yoghurt"
+      ]
+    }
+  ]
+}

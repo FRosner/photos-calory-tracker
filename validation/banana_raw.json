@@ -1,7 +1,7 @@
 {
   "foods": [
     {
-      "readable_name": "Banana",
+      "readable_name": "banana",
       "protein_g": 1,
       "fat_g": 0,
       "fibre_g": 2,

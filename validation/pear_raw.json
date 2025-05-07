@@ -1,7 +1,7 @@
 {
   "foods": [
     {
-      "readable_name": "Pear",
+      "readable_name": "pear",
       "protein_g": 0,
       "fat_g": 0,
       "fibre_g": 6,
@@ -11,7 +11,7 @@
       "total_health_score": 10,
       "processing_degree": "low",
       "components": [
-        "Pear"
+        "pear"
       ]
     }
   ]

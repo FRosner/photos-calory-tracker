@@ -1,0 +1,18 @@
+{
+  "foods": [
+    {
+      "readable_name": "dumplings",
+      "protein_g": 17,
+      "fat_g": 23,
+      "fibre_g": 22,
+      "carbohydrate_g": 70,
+      "total_mass_g": 350,
+      "total_kcal": 595,
+      "total_health_score": 8,
+      "processing_degree": "medium",
+      "components": [
+        "Pear"
+      ]
+    }
+  ]
+}
